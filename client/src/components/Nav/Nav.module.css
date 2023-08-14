@@ -1,0 +1,25 @@
+.Container{
+    display: flex;
+    background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.links{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.658);
+}

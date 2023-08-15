@@ -1,48 +1,39 @@
 const { DataTypes } = require('sequelize');
 
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
-
 module.exports = (sequelize) => {
-  // Defino el modelo:
-  sequelize.define('country', { // como el create table, el sequelize.define
-    id: {
-      type: DataTypes.STRING(3),
-      primaryKey: true,
-      allowNull: false,
-    },
 
+  sequelize.define("Country", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    id:{
+      type: DataTypes.STRING(3),
+      primaryKey:true,
+      allowNull:false
     },
-
-    continent: {
+    image:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull:false
     },
-
-    capital: {
+    continent:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull:false
     },
-
-    subregion: {
+    capital:{
       type: DataTypes.STRING,
+      allowNull:false,
     },
-
-    area: {
+    subregion:{
       type: DataTypes.STRING,
     },
-    
-    population: {
+    area:{
       type: DataTypes.STRING,
     },
-    
-  },{timestamps:false});
+    population:{
+      type: DataTypes.STRING,
+    }
+  },{
+    timestamps:false
+  });
 };

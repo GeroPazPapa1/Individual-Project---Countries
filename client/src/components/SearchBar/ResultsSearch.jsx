@@ -17,7 +17,7 @@ function ResultsSearch() {
   if (!Array.isArray(countriesResult)) { // Esta sección verifica si countriesResult es un array. 
     // Si no es un array, mostramos un mensaje de error o retorno de componente vacío
     return <h2 className={styles.text}>DEBES INGRESAR UN PAIS ‼.</h2>; // Si no lo es, significa que no se ingresó un país válido en la búsqueda. En ese caso, se renderiza un mensaje de error usando los estilos definidos en styles.text.
-  }
+  };
 
   // Aquí se define la estructura de la presentación de resultados.
   // El contenido se coloca dentro de un contenedor con la clase Container.
@@ -47,7 +47,7 @@ function ResultsSearch() {
       </div>
     </div>
   );
-}
+};
 
 export default ResultsSearch;
 

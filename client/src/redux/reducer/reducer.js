@@ -3,7 +3,7 @@
 //   cómo el estado de la aplicación cambia en función de las acciones que se envían al store
 //    de Redux
 
-import { ALL_COUNTRY, FILTER, ORDER, SEARCH_COUNTRY, ORDER, SEARCH_COUNTRY } from "../action/action";
+import { ALL_COUNTRY, FILTER, ORDER, SEARCH_COUNTRY, GET_ACTIVITY, CREATE_ACTIVITY } from "../action/action";
 // Importa los tipos de acciones definidos en el archivo "action.js". Estos tipos son constantes que representan los nombres de las acciones que pueden ser despachadas desde los componentes para actualizar el estado de la aplicación.
 
 

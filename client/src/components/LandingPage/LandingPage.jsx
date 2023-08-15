@@ -6,7 +6,7 @@ function LandingPage() { // Define una función de componente llamada LandingPag
   return (
     <div className={style.Container}>{/*Crea un contenedor <div> con la clase CSS Container. Esta clase define estilos específicos para el contenedor de la página de aterrizaje.*/}
         <div className={style.ContainerText}>{/*Crea otro contenedor <div> con la clase CSS ContainerText. Esta clase se utiliza para agrupar el contenido de texto y el botón en el centro de la página.*/}
-            <h1 className={style.title}>BIENVENIDO A AVENTURAS SIN FRONTERAS</h1>{/*Crea un encabezado de nivel 1 (<h1>) con el texto "BIENVENIDO A AVENTURAS SIN FRONTERAS". La clase CSS title se aplica a este elemento para darle estilos específicos.*/}
+            <h1 className={style.title}>TE DAMOS LA BIENVENIDA A NUESTRO AVENTURA</h1>{/*Crea un encabezado de nivel 1 (<h1>) con el texto "BIENVENIDO A AVENTURAS SIN FRONTERAS". La clase CSS title se aplica a este elemento para darle estilos específicos.*/}
             <Link to="/home"> {/*Crea un enlace utilizando el componente Link de react-router-dom. El atributo to especifica la URL a la que se redireccionará cuando se haga clic en el enlace.*/}
                 <button className={style.button}>INGRESAR</button>{/*Crea un botón con el texto "INGRESAR". La clase CSS button se aplica para aplicar estilos al botón.*/}
             </Link>

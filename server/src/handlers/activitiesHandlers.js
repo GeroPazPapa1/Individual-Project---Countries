@@ -24,10 +24,11 @@ const getActivityHandler = async (req, res) => {
 
 
 const postActivityHandler = async (req, res) => {
-    const { name, difficulty, duration, season, countries } = req.body;
+    const { name, difficulty, duration, season, countryId } = req.body;
+    console.log(req.body);
     try {
-        if (countries.length === 0) throw new Error('Debe estara asociado a un pais');
-        const newActivity = await createActivity(name, difficulty, duration, season, countries);
+        if (countryId.length === 0) throw new Error('Debe estara asociado a un pais');
+        const newActivity = await createActivity(name, difficulty, duration, season, countryId[0]);
         res.status(200).json(newActivity);
     } catch (error) {
     res.status(400).json({ error: error.message });
@@ -64,7 +65,9 @@ const putActivityHandler = async (req, res) => {
     } catch (error) {
         res.status(400).json({ error:error.message });
     }
+    
 };
+
 //↑ En esta parte, se define el manejador de la ruta para modificar una actividad existente. 
 //   El manejador es una función asincrónica que se encarga de manejar la solicitud HTTP para
 //    modificar una actividad.

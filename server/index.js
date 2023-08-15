@@ -1,8 +1,7 @@
-const axios = require("axios");
 const ApiToDb = require('./src/handlers/ApiToDb');
 const server = require("./src/app");
 const { conn } = require('./src/db.js');
-const PORT = 5000;
+const PORT = 3001;
 
 /*En estas líneas, se están importando los módulos y objetos necesarios para el 
 funcionamiento del servidor y la base de datos:
@@ -22,7 +21,7 @@ loadDB: Se importa un módulo llamado loadDB, que esta relacionado con cargar
 datos en la base de datos.*/
 
 
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
 
 server.listen(PORT, async () => { // async await Para cargar todo en la base de datos al levantarlo
   console.log(`Server listening on port ${PORT}`);

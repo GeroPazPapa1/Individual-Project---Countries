@@ -19,11 +19,14 @@ const getActivity = async () => {
             }
         ]
     });
-}
+};
 
 const createActivity = async (name, difficulty, duration, season, countries) => {
+    console.log(name, difficulty, duration, season, countries);
     //↑ Define una función createActivity que crea una nueva actividad.
-newActivity = await Activity.create({ name, difficulty, duration, season });
+    let durationN = +duration
+    console.log(typeof durationN);
+newActivity = await Activity.create({ name, difficulty, duration:durationN, season });
     //↑ Crea una nueva instancia del modelo Activity con los parámetros proporcionados anteriormente y la asigna a la variable newActivity. El método create devuelve una promesa.
 newActivity.addCountries(countries);
     //↑ Asocia los países especificados a la nueva actividad utilizando el método addCountries, que es generado automáticamente por Sequelize debido a la relación definida entre Activity y Country. La asociación se basa en los identificadores de los países proporcionados en el parámetro countries.

@@ -47,3 +47,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Estilo para el menú hamburguesa */
+.MenuIcon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.MenuIcon .Bar {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+/* Animación para abrir el menú */
+.MenuIcon.Open .Bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.MenuIcon.Open .Bar:nth-child(2) {
+  opacity: 0;
+}
+
+.MenuIcon.Open .Bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Estilo para el contenedor del menú y contenido */
+.MenuContainer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%; /* Ajusta el ancho según tu diseño */
+  height: 100%;
+  background-color: #fff; /* Ajusta el color de fondo */
+  transition: 0.3s;
+  z-index: 998; /* Asegúrate de que esté detrás del ícono del menú */
+}
+
+/* Estilo para mostrar el menú y contenido cuando el menú hamburguesa está abierto */
+.MenuContainer.Open {
+  left: 0;
+}

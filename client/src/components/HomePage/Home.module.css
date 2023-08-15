@@ -1,95 +1,66 @@
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items:center;
+  background: linear-gradient(
+    rgba(70, 66, 66, 0.7),
+    rgba(65, 51, 51, 0.123)
+  ), url("../../../public/fondoPpal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  background-attachment: fixed;
+  padding: 1rem;
+  gap: 5rem;
+}
+
+.countries {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 60rem;
+  max-width: 65rem;
+}
+
+.containerFilter{
+  display: flex;
+  flex-direction: column;
+}
+
+.Paginacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ActivityAlert{
+  text-align: center;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+@media (max-width:1075px){
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(
       rgba(70, 66, 66, 0.7),
       rgba(65, 51, 51, 0.123)
     ), url("../../../public/fondoPpal.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-  }
-  
-  .countries {
-    display: flex;
+    height: auto;
+    background-attachment: fixed;
     padding: 1rem;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 70rem;
   }
-  
-  .containerFilter {
+
+  .containerFilter{
     display: flex;
-    gap: 1rem;
   }
-  
-  /* Estilos generales del contenedor del filtro */
-  .allFilter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0ab;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    gap: 1rem;
-    border: solid wheat .2rem;
-    box-shadow:  0 0 10px black;
-    width: 25rem;
-  }
-  
-  /* Estilos del contenedor de las opciones de filtro */
-  .Filters,
-  .orders {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-  }
-  
-  /* Estilos del select de filtro */
-  .Filters select,
-  .orders select {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 16px;
-    margin-right: 10px;
-    outline: none;
-    appearance: none;
-  }
-  
-  /* Estilos del botón de aplicar */
-  .button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  .button:active {
-    background-color: #003d80;
-  }
-  
-  .countriesContainer {
-    background-color: transparent;
-  }
-  
-  .ActivityAlert {
-    text-align: center;
-    padding: 2rem;
-    margin: 5rem;
-    font-size: 2rem;
-    color: aliceblue;
-  }
-  
+}
